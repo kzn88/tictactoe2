@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.site {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url(fon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container1 {
+  width: 600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.block {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  line-height: 300px;
+  font-size: 200px;
+  text-align: center;
+  font-family: 'Rubik Mono One', Arial,sans-serif;
+  color:black;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px black;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes block {
+  0%{font-size: 200px;}
+  50%{font-size: 250px;}
+  100%{font-size: 200px;}
+}
+
+[posx='1'],[posx='4'],[posx='7'],[posx='2'],[posx='5'],[posx='8']  {
+  border-right: 6px solid black;
+}
+[posx='1'],[posx='2'],[posx='3'],[posx='4'],[posx='5'],[posx='6']  {
+  border-bottom: 6px solid black;
+}
+
+.active {
+  border:4px solid black;
+}
+.site {
+  display: flex;
+  flex-direction: column;
+}
+.fighter {
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 35px;
+  font-family: 'Zen Dots', Arial, cursive;
+  color:black;
+  
+}
+.winner {
+  height: 100px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  font-size: 80px;
+  font-family: 'Nerko One', Arial,cursive;
+  color:black;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px rgb(5, 105, 105);
+}
+.x,.null {
+  background-color: rgb(231, 81, 114);
+  color: black;
+  padding: 10px;
+  border-radius: 10%;
+  font-size: 30px;
+  margin-left: 10px;
+  width: 150px;
+  text-align: center;
+}
+.x:hover {
+  cursor: pointer;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.null:hover {
+  cursor: pointer;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes hover {
+  0% {}
+  50%{background-color: black; color:rgb(231, 81, 114)}
+  100%{background-color: black;color:rgb(231, 81, 114)}
+}
+.name {
+  text-align: center;
+  font-size: 10em;
+  font-family: 'Hanalei Fill',Arial, cursive;
+  
+}
+.logo {
+  color: yellow;
+  background-image: linear-gradient(to bottom, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px rgb(5, 105, 105);
+}
+.restart {
+  display: flex;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Zen Dots', Arial, cursive;
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(231, 81, 114);
+  color: black;
+  border-radius: 10%;
+  padding: 15px;
+  text-align: center;
+  animation-name: restart;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes restart {
+  0% {}
+  50%{background-color:rgb(231, 81, 114);
+  color:black}
+  100%{background-color: yellow;
+  color:rgb(231, 81, 114)}
+}
+.restart:hover {
+  cursor: pointer;
+}
+.hover:hover{
+  cursor: pointer;
+  background-image: none;
+  background-color: rgba(150, 99, 125, 0.5);
+  -webkit-background-clip:padding;
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke: 0;
+}
+
+
+@media only screen and (max-width: 896px)
+{
+.name {
+  font-size: 75px;
+}
+
+.fighter {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.x,.null {
+  width: 120px;
+  margin-right: 10px;
+}
+.container1{
+  width: 390px;
+  height: 390px;
+}
+.block {
+  width: 130px;
+  height: 130px;
+  line-height: 200px;
+  font-size: 130px;
+}
+@keyframes block {
+  0%{font-size: 130px;}
+  50%{font-size: 160px;}
+  100%{font-size: 130px;}
+}
+
+
+}
